@@ -25,10 +25,10 @@ TripMate is a simple full-stack **MEN (MongoDB, Express, Node.js)** web app that
 ---
 
 ## Folder Structure
-├── models/ # Mongoose models (User, Trip)
-├── routes/ # Express routes (auth, trips)
-├── views/ # EJS templates
-├── public/ # Static assets (CSS, images)
-├── server.js # Entry point
-├── .env # Environment variables
-└── README.md # Project documentation# men-stack-crud-app-project
+1. models/ # Mongoose models (User, Trip)
+2. routes/ # Express routes (auth, trips)
+3.  views/ # EJS templates
+4. public/ # Static assets (CSS, images)
+5.  server.js # Entry point
+6.  .env # Environment variables
+7. README.md # Project documentation# men-stack-crud-app-project
