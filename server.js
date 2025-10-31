@@ -56,8 +56,8 @@ mongoose.connect(process.env.MONGODB_URI, {
   ssl: true,
   tlsAllowInvalidCertificates: true
 })
-.then(() => console.log("✅ MongoDB Connected"))
-.catch(err => console.error("❌ MongoDB Connection Error:", err));
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.error("MongoDB Connection Error:", err));
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

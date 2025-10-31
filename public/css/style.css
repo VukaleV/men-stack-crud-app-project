@@ -6,19 +6,19 @@ body {
   padding: 0;
 }
 
-/* PAGE TITLE */
+
 .page-title {
   color: #007bff;
   font-weight: 600;
 }
 
-/* NO TRIPS */
+
 .no-trips {
   color: #6c757d;
   margin-top: 50px;
 }
 
-/* ADD BUTTON */
+
 .btn-add {
   background: linear-gradient(135deg, #28a745, #218838);
   color: #fff;
@@ -33,7 +33,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* TRIP CARDS */
+
 .trip-card {
   border-radius: 1rem;
   transition: all 0.3s ease;
@@ -56,7 +56,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* VIEW BUTTON */
+
 .btn-view {
   background: linear-gradient(135deg, #007bff, #00b4d8);
   color: #fff;
@@ -70,13 +70,13 @@ body {
   transform: translateY(-2px);
 }
 
-/* RESPONSIVE GRID */
+
 @media (max-width: 768px) {
   .trip-card .card-body {
     padding: 1rem;
   }
 }
-/* TRIP DETAILS CARD */
+
 .trip-detail-card {
   border-radius: 15px;
   padding: 25px;
@@ -116,7 +116,7 @@ body {
   border-radius: 10px;
 }
 
-/* TRIP FORM CARD */
+
 .trip-form-card {
   max-width: 600px;
   background: #fff;
