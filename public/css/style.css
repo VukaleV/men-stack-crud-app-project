@@ -1,0 +1,160 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* PAGE TITLE */
+.page-title {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* NO TRIPS */
+.no-trips {
+  color: #6c757d;
+  margin-top: 50px;
+}
+
+/* ADD BUTTON */
+.btn-add {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34);
+  transform: translateY(-2px);
+}
+
+/* TRIP CARDS */
+.trip-card {
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.trip-card .card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.trip-card .card-text {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* VIEW BUTTON */
+.btn-view {
+  background: linear-gradient(135deg, #007bff, #00b4d8);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+  background: linear-gradient(135deg, #0069d9, #0096c7);
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 768px) {
+  .trip-card .card-body {
+    padding: 1rem;
+  }
+}
+/* TRIP DETAILS CARD */
+.trip-detail-card {
+  border-radius: 15px;
+  padding: 25px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.trip-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.trip-detail-card .trip-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.trip-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.trip-info-item h6 {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0.2rem;
+}
+
+.trip-info-item p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.trip-description {
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* TRIP FORM CARD */
+.trip-form-card {
+  max-width: 600px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.trip-form-card .form-label {
+  font-weight: 500;
+}
+
+.trip-form-card .form-control {
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.trip-form-card .form-control:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.2);
+}
+
+.trip-form-card .btn-primary {
+  background: linear-gradient(135deg, #007bff, #00b4d8);
+  border: none;
+}
+
+.trip-form-card .btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #007bff);
+}
+
+.trip-form-card .btn-secondary {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  border: none;
+}
+
+.trip-form-card .btn-secondary:hover {
+  background: linear-gradient(135deg, #495057, #343a40);
+}

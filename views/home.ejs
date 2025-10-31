@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripMate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <%- include("partials/header") %>
+
+  <main class="d-flex align-items-center justify-content-center text-center" style="height: 80vh;">
+  <div>
+    <h1 class="display-4 fw-bold text-primary mb-3">Welcome to TripMate</h1>
+    <p class="lead mb-4">Your personal travel log to create, view, and manage your adventures.</p>
+
+    <% if (!currentUser) { %>
+      <a href="/login" class="btn btn-primary btn-lg me-2 px-4">Login</a>
+      <a href="/register" class="btn btn-outline-primary btn-lg px-4">Register</a>
+    <% } else { %>
+      <a href="/trips" class="btn btn-success btn-lg px-4">Go to My Trips</a>
+    <% } %>
+  </div>
+</main>
+
+
+  <%- include("partials/footer") %>
+</body>
+</html>

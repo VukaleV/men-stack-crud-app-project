@@ -1,0 +1,47 @@
+<%- include("partials/header") %>
+
+<div class="container py-5">
+  <div class="trip-detail-card shadow-sm mx-auto">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="card-title text-primary mb-0"><%= trip.title %></h2>
+        <div class="trip-buttons">
+          <a href="/trips/<%= trip._id %>/edit" class="btn btn-outline-secondary btn-sm">Edit</a>
+          <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST" class="d-inline">
+            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Delete this trip?')">Delete</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="trip-info d-flex flex-wrap gap-4">
+        <div class="trip-info-item">
+          <h6 class="text-muted">Destination</h6>
+          <p class="fw-bold mb-0"><%= trip.destination %></p>
+        </div>
+        <div class="trip-info-item">
+          <h6 class="text-muted">Dates</h6>
+          <p class="mb-0"><%= trip.startDate.toDateString() %> - <%= trip.endDate.toDateString() %></p>
+        </div>
+        <% if (trip.price) { %>
+        <div class="trip-info-item">
+          <h6 class="text-muted">Price</h6>
+          <p class="mb-0 fw-bold">$<%= trip.price %></p>
+        </div>
+        <% } %>
+      </div>
+
+      <% if (trip.description) { %>
+        <div class="trip-description mt-4 p-3 bg-light rounded-3 shadow-sm">
+          <h6 class="text-muted">Description</h6>
+          <p class="mb-0"><%= trip.description %></p>
+        </div>
+      <% } %>
+
+      <div class="mt-4 text-center">
+        <a href="/trips" class="btn btn-secondary w-50">Back to Trips</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

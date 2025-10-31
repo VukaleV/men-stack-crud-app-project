@@ -1,0 +1,39 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/style.css">
+
+<main class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="fw-bold text-primary">My Trips</h1>
+    <a href="/trips/new" class="btn btn-success btn-lg shadow-sm">
+      Add New Trip
+    </a>
+  </div>
+
+  <% if (trips.length === 0) { %>
+    <div class="text-center text-muted mt-5">
+      <h4>You have no trips yet.</h4>
+      <p>Click “Add New Trip” to start your adventure!</p>
+    </div>
+  <% } else { %>
+    <div class="row g-4">
+      <% trips.forEach(trip => { %>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="trip-card card h-100 d-flex flex-column justify-content-between p-3">
+            <h5 class="card-title text-center"><%= trip.destination %></h5>
+            <p class="card-text text-center mb-2">
+              <strong>Dates:</strong><br>
+              <%= trip.startDate.toDateString() %> - <%= trip.endDate.toDateString() %>
+            </p>
+            <% if (trip.price) { %>
+              <p class="card-text text-center mb-3"><strong>Price:</strong> $<%= trip.price %></p>
+            <% } %>
+            <a href="/trips/<%= trip._id %>" class="btn btn-primary w-100 mt-auto">View Trip</a>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</main>
+
+<%- include("partials/footer") %>
+
